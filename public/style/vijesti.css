@@ -1,0 +1,102 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+iframe {
+    border: none; 
+    width: 100%;
+    height: fit-content;
+  }
+
+
+.glavnaVijest {
+    width: 100%;
+    aspect-ratio: 2/1;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+
+.glavnaVijest .text {
+    color: white;
+    padding: 10px;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.container1{
+    flex:50%;
+    width: 100%; 
+    display: flex;
+    flex-wrap: wrap;
+    aspect-ratio: 1/1;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .vijesti1{
+    flex:50%;
+    width: 100%; 
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    aspect-ratio: 1/2;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+.vijesti{
+   flex:50%;
+   width: 100%; 
+   height: 400px;
+   box-sizing: border-box;
+}
+
+.visokaVijest {
+    border: 1px solid #000;
+    aspect-ratio: 1/2;
+    background-color: #f0f0f0;
+    position: relative;
+}
+
+.visokaVijest .text {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.kvadratnaVijest {
+    border: 1px solid #000; 
+    aspect-ratio: 1/1;
+    background-color: #e0e0e0;
+    position: relative;
+}
+
+.kvadratnaVijest .text {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+@media (max-width: 800px) {
+    .glavnaVijest {
+        aspect-ratio: 1/1;
+    }
+
+    .container {
+     flex-direction: column;    
+    }
+    
+
+}

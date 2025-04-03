@@ -1,0 +1,25 @@
+body {
+    background-color: #fdf1d3;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body h2 {
+    margin-left: 20px;
+  }
+  
+  iframe {
+    border: none; 
+    width: 100%;
+    height: fit-content;
+  }
+  #upiti {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  
+    border: 1px solid #000;
+    padding: 20px;
+    margin: 20px;
+  }

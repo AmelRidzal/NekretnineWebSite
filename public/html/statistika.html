@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Statistika Nekretnina</title>
+    <link rel="stylesheet" href="../Style/statistika.css"> 
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="../scripts/SpisakNekretnina.js"></script>
+    <script src="../scripts/nekretnine.js"></script>
+    <script src="../scripts/StatistikaNekretnina.js"></script>
+    <script src="../scripts/statistika.js"></script>
+</head>
+<body>
+    <iframe src="meni.html"></iframe>
+
+    <div class="container">
+        <h1>Statistika Nekretnina</h1>
+
+        <!-- Prosječna kvadratura -->
+        <h2>Izračun prosječne kvadrature</h2>
+        <label for="kriterijKvadratura">Unesite kriterij (JSON format):</label>
+        <input type="text" id="kriterij-kvadratura" placeholder='npr. {"tip_nekretnine":"Stan"}'>
+        <button id="izracunaj-kvadratura">Izračunaj</button>
+        <p id="rezultat-kvadratura"></p>
+    
+        <!-- Outlier -->
+        <h2>Pronalaženje outlier-a</h2>
+        <label for="kriterij-outlier">Unesite kriterij (JSON format):</label>
+        <input type="text" id="kriterij-outlier" placeholder='npr. {"tip_nekretnine":"Stan"}'><br>
+        <label for="nazivSvojstva">Naziv svojstva:</label>
+        <input type="text" id="naziv-svojstva" placeholder='npr. "cijena"'>
+        <button id="pronadji-outlier">Pronađi</button>
+        <p id="rezultat-outlier"></p>
+    
+        <!-- Moje nekretnine -->
+        <h2>Moje nekretnine</h2>
+        <label for="korisnikId">ID korisnika:</label>
+        <input type="number" id="korisnikId">
+        <button id="moje-nekretnine">Prikaži</button>
+        <ul id="lista-moje-nekretnine"></ul>
+    
+        
+       
+        <h2>Iscrtaj histogram</h2>
+        <form id="statistika-form">
+            <div id="input">
+                <label for="pocetni-datum">Početni datum:</label>
+                <input type="number" id="pocetni-datum" name="pocetni-datum"  required>
+            </div>
+            <div id="input">
+                <label for="krajnji-datum">Krajnji datum:</label>
+                <input type="number" id="krajnji-datum" name="krajnji-datum" required>
+            </div>
+            <div id="input">
+                <label for="min-cijena">Minimalna cijena (BAM):</label>
+                <input type="number" id="min-cijena" name="min-cijena"  required>
+            </div>
+            <div id="input">
+                <label for="max-cijena">Maksimalna cijena (BAM):</label>
+                <input type="number" id="max-cijena" name="max-cijena" required>
+            </div>
+            <div id="input">
+                <button type="button" id="iscrtaj-dugme">Iscrtaj histogram</button>
+            </div>
+        </form>
+
+
+    <div id="barChart">
+        <canvas id=can></canvas>
+    </div>
+
+   
+
+
+</body>
+</html>
+

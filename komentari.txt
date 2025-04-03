@@ -1,0 +1,2 @@
+Zadatak dva je nemoguce uraditi bez izmjena HTMLa. Najlakse rjesenje za poravnanje drugog reda u dijelu nekretnina za stan je da se dodaju nevidljivi divovi u flex kontenjer
+
